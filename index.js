@@ -16,7 +16,7 @@ taskListElement.addEventListener(`dragend`, (evt) => {
 });
 
 // Реализуем логику перетаскивания
-taskListElement.addEventListener(`dragover`, (evt) =>v{
+taskListElement.addEventListener(`dragover`, (evt) => {
     // Разрешаем сбрасывать элементы в эту область
     evt.preventDefault();
 
