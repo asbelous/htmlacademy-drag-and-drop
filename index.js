@@ -54,3 +54,32 @@ const getNextElement = (cursorPosition, currentElement) => {
 
     return nextElement;
 };
+
+taskListElement.addEventListener(`dragover`, (evt) => {
+    evt.preventDefault();
+
+    const activeElement = taskListElement.querySelector(`.selected`);
+    const currentElement = evt.target;
+    const isMoveable = activeElement !== currentElement &&
+        currentElement.classList.contains(`tasks__item`);
+
+    if (!isMoveable) {
+        return;
+    }
+
+    // evt.clientY — вертикальная координата курсора в момент,
+    // когда сработало событие
+    const nextElement = getNextElement(evt.clientY, currentElement);
+
+    // Проверяем, нужно ли менять элементы местами
+    if (
+        nextElement &&
+        activeElement === nextElement.previousElementSibling ||
+        activeElement === nextElement
+    ) {
+        // Если нет, выходим из функции, чтобы избежать лишних изменений в DOM
+        return;
+    }
+
+    tasksListElement.insertBefore(activeElement, nextElement);
+});
