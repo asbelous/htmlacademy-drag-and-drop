@@ -157,7 +157,6 @@ tasksListElement.addEventListener(`dragover`, (evt) => {
   // 2. именно на элементе списка
   
   const isMoveable = activeElement !== currentElement &&
-  
     currentElement.classList.contains(`tasks__item`);
 
   // Если нет, прерываем выполнение функции
