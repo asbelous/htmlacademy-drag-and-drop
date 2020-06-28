@@ -99,6 +99,7 @@ body {
 Переходим к JavaScript. В первую очередь присвоим элементам упомянутый ранее атрибут draggable со значением true, чтобы разрешить задачам перемещаться. Это можно сделать прямо в разметке или с помощью JavaScript.
 
 const tasksListElement = document.querySelector(`.tasks__list`);
+
 const taskElements = tasksListElement.querySelectorAll(`.tasks__item`);
 
 // Перебираем все элементы списка и присваиваем нужное значение
