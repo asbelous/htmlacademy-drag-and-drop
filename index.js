@@ -40,3 +40,17 @@ taskListElement.addEventListener(`dragover`, (evt) => {
     // Вставляем activeElement перед nextElement
     taskListElement.insertBefore(activeElement, nextElement);
 });
+
+// Учтём положение курсора относительно центра
+const getNextElement = (cursorPosition, currentElement) => {
+    // Получаем объект с размерами и координатами
+    const currentElementCoord = currentElement.getBoundingClientRect();
+    // Находим вертикальную координату центра текущего элемента
+    const currentElementCenter = currentElementCoord.y + currentElementCoord.height / 2;
+
+    // Если курсор выше центра элемента, возвращаем текущий элемент
+    // В ином случае - следующий DOM-элемент
+    const nextElement = (cursorPosition < currentElementCenter) ? currentElement : currentElement.nextElementSibling;
+
+    return nextElement;
+};
