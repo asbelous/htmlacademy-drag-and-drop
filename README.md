@@ -103,6 +103,7 @@ const tasksListElement = document.querySelector(`.tasks__list`);
 const taskElements = tasksListElement.querySelectorAll(`.tasks__item`);
 
 // Перебираем все элементы списка и присваиваем нужное значение
+
 for (const task of taskElements) {
   task.draggable = true;
 }
