@@ -252,8 +252,8 @@ tasksListElement.addEventListener(`dragover`, (evt) => {
 
 ## Полезности
 
-  - HTML Drag and Drop API на MDN. Вся основная информация об API.
-  - Native HTML5 Drag and Drop. Статья с описанием основных возможностей API и примером использования. Есть перевод на русский.
-  - How to make a Drag-and-Drop file uploader with vanilla JavaScript. Статья о том, как реализовать загрузку файлов с помощью drag & drop.
-  - Drag & drop с событиями мыши. Пример, как реализовать эффект без использования HTML Drag and Drop API. Это может понадобиться, например, из-за плохой поддержки API мобильными браузерами.
-  - 10 Best Drag And Drop JavaScript Libraries. Список JavaScript-библиотек, с помощью которых можно усовершенствовать встроенный drag & drop.
+  - [HTML Drag and Drop API на MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). Вся основная информация об API.
+  - [Native HTML5 Drag and Drop](https://www.html5rocks.com/en/tutorials/dnd/basics/). Статья с описанием основных возможностей API и примером использования. Есть [перевод на русский](https://www.html5rocks.com/ru/tutorials/dnd/basics/).
+  - [How to make a Drag-and-Drop file uploader with vanilla JavaScript](https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/). Статья о том, как реализовать загрузку файлов с помощью drag & drop.
+  - [Drag & drop с событиями мыши](https://learn.javascript.ru/mouse-drag-and-drop). Пример, как реализовать эффект без использования HTML Drag and Drop API. Это может понадобиться, например, из-за плохой поддержки API мобильными браузерами.
+  - [10 Best Drag And Drop JavaScript Libraries](https://www.cssscript.com/best-drag-drop-javascript-libraries/). Список JavaScript-библиотек, с помощью которых можно усовершенствовать встроенный drag & drop.
