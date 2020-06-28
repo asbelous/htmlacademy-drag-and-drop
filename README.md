@@ -56,13 +56,11 @@ body {
   font-size: 18px;
   line-height: 25px;
   color: #164a44;
-
   background-color: #b2d9d0;
 }
 
 .tasks__title {
     margin: 50px 0 20px 0;
-
     text-align: center;
     text-transform: uppercase;
  }
@@ -70,7 +68,6 @@ body {
 .tasks__list {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -78,13 +75,11 @@ body {
   transition: background-color 0.5s;
   margin-bottom: 10px;
   padding: 5px;
-
   text-align: center;
   border: 2px dashed #b2d9d0;
   border-radius: 10px;
   cursor: move;
   background-color: #dff2ef;
-
   transition: background-color 0.5s;
 }
 
