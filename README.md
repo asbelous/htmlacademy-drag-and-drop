@@ -13,7 +13,7 @@
 
 В [стандарте HTML5](https://html.spec.whatwg.org/multipage/dnd.html#dnd) есть API, который позволяет реализовать эффект drag & drop. Он даёт возможность с помощью специальных событий контролировать захват элемента на странице мышью и его перемещение в новое положение. Рассмотрим этот API подробнее.
 
-По умолчанию перемещаться могут только ссылки, изображения и выделенные фрагменты. Если начать перетаскивать их, появится фантомная копия, которая будет следовать за курсором. Чтобы добавить возможность перетаскивания другим элементам, нужно задать атрибуту draggable значение true.
+По умолчанию перемещаться могут только ссылки, изображения и выделенные фрагменты. Если начать перетаскивать их, появится фантомная копия, которая будет следовать за курсором. Чтобы добавить возможность перетаскивания другим элементам, нужно задать атрибуту `draggable` значение `true`.
 
 <div draggable="true">Draggable element</div>
 
@@ -54,11 +54,13 @@ body {
   font-size: 18px;
   line-height: 25px;
   color: #164a44;
+
   background-color: #b2d9d0;
 }
 
 .tasks__title {
     margin: 50px 0 20px 0;
+
     text-align: center;
     text-transform: uppercase;
  }
@@ -66,6 +68,7 @@ body {
 .tasks__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -73,11 +76,13 @@ body {
   transition: background-color 0.5s;
   margin-bottom: 10px;
   padding: 5px;
+
   text-align: center;
   border: 2px dashed #b2d9d0;
   border-radius: 10px;
   cursor: move;
   background-color: #dff2ef;
+
   transition: background-color 0.5s;
 }
 
