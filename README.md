@@ -99,9 +99,9 @@ body {
 
 Переходим к JavaScript. В первую очередь присвоим элементам упомянутый ранее атрибут draggable со значением true, чтобы разрешить задачам перемещаться. Это можно сделать прямо в разметке или с помощью JavaScript.
 
-const tasksListElement = document.querySelector(`.tasks__list`);
+const tasksListElement = document.querySelector('.tasks__list');
 
-const taskElements = tasksListElement.querySelectorAll(`.tasks__item`);
+const taskElements = tasksListElement.querySelectorAll('.tasks__item');
 
 // Перебираем все элементы списка и присваиваем нужное значение
 
@@ -115,12 +115,12 @@ for (const task of taskElements) {
 
 Будем отслеживать события dragstart и dragend на всём списке. В начале перетаскивания будем добавлять класс selected элементу списка, на котором было вызвано событие. После окончания перетаскивания будем удалять этот класс.
 
-tasksListElement.addEventListener(`dragstart`, (evt) => {
-  evt.target.classList.add(`selected`);
+tasksListElement.addEventListener('dragstart', (evt) => {
+  evt.target.classList.add('selected');
 })
 
-tasksListElement.addEventListener(`dragend`, (evt) => {
-  evt.target.classList.remove(`selected`);
+tasksListElement.addEventListener('dragend', (evt) => {
+  evt.target.classList.remove('selected');
 });
 
 ### Шаг 3. Реализуем логику перетаскивания
@@ -136,7 +136,7 @@ tasksListElement.addEventListener(`dragend`, (evt) => {
 
 Напишем код:
 
-tasksListElement.addEventListener(`dragover`, (evt) => {
+tasksListElement.addEventListener('dragover', (evt) => {
 
   // Разрешаем сбрасывать элементы в эту область
   
@@ -144,7 +144,7 @@ tasksListElement.addEventListener(`dragover`, (evt) => {
 
   // Находим перемещаемый элемент
   
-  const activeElement = tasksListElement.querySelector(`.selected`);
+  const activeElement = tasksListElement.querySelector('.selected');
   
   // Находим элемент, над которым в данный момент находится курсор
   
@@ -157,7 +157,7 @@ tasksListElement.addEventListener(`dragover`, (evt) => {
   // 2. именно на элементе списка
   
   const isMoveable = activeElement !== currentElement &&
-    currentElement.classList.contains(`tasks__item`);
+    currentElement.classList.contains('tasks__item');
 
   // Если нет, прерываем выполнение функции
   
@@ -214,15 +214,15 @@ const getNextElement = (cursorPosition, currentElement) => {
 
 Всё почти готово, но нам нужно ещё учесть ситуацию, когда во время перемещения курсор был наведён на какой-то элемент и при этом центральную ось так и не пересёк. Для нас это значит, что порядок не изменился, и ничего делать не надо. Но программа пока об этом не знает и в таких ситуациях осуществляет вставку в DOM на то же самое место при каждом срабатывании события dragover. Как мы помним, оно срабатывает очень часто и каждый раз влечёт за собой ненужные операции с DOM. Мы изменим это поведение, добавив проверку.
 
-tasksListElement.addEventListener(`dragover`, (evt) => {
+tasksListElement.addEventListener('dragover', (evt) => {
   evt.preventDefault();
 
-  const activeElement = tasksListElement.querySelector(`.selected`);
+  const activeElement = tasksListElement.querySelector('.selected');
   
   const currentElement = evt.target;
   
   const isMoveable = activeElement !== currentElement &&
-    currentElement.classList.contains(`tasks__item`);
+    currentElement.classList.contains('tasks__item');
 
   if (!isMoveable) {
     return;
